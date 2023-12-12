@@ -1,0 +1,145 @@
+:root {
+  --main: yellow;
+  --background: rgb(222, 222, 225);
+  --color: rgb(8, 9, 2);
+}
+
+html {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#calculator_box {
+  height: auto;
+  width: 60vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  background-color: var(--background);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+}
+
+.header {
+  display: flex;
+  font-size: 25px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--background);
+  color: var(--color);
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.input {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: var(--color);
+}
+
+#income_slide {
+  width: 25vw;
+}
+
+.slider_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider {
+  margin-top: 2vh;
+  width: 25vw;
+  margin-bottom: 2vh;
+}
+
+.mobile_holder {
+  display: flex;
+}
+
+#other_income {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sep {
+  margin-top: 2vh;
+  background-color: var(--main);
+  height: 10px;
+  width: 50vw;
+  margin-left: 5vw;
+  margin-bottom: 5vh;
+}
+
+.num_container {
+  display: flex;
+}
+
+#submit_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+#submit {
+  display: inline;
+  background-color: black;
+  border-radius: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.misc_input {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: var(--color);
+}
+
+
+@media (max-width: 600px) {
+    html {
+        margin-left: 10vw;
+        margin-right: 10vw;
+
+    }
+    
+    #bonk {
+        display: none;
+    }
+
+    #calculator_box {
+      margin-left: 0;
+    }
+
+    #income_slide {
+      width: 45vw;
+    }
+
+    .slider {
+      width: 45vw;
+    }
+
+    .misc_input {
+      display: inline;
+    }
+
+    .mobile_holder {
+      justify-content: center;
+      align-items: center;
+    }
+}
