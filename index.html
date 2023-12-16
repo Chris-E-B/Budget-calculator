@@ -9,14 +9,127 @@
 <body>
     <main>
         <header>
+            <div id="popup_container">
+                <div id="popup">
+                    <div id="balance_header">
+                        <div id="balance_title">
+                            Budget Report
+                        </div>
+                        <div id="times">
+                            &times;
+                        </div>
+                    </div>
+                    <div id="balance_body">
+                        <div id="status_container">
+                            <div id="status_header">
+                                Status
+                            </div>
+                            <div id="status_respone">
+                                Your current budget is : <div id="status"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="pie_chart_container">
+                        <div id="pie_chart">
+                            
+                        </div>
+                    </div>
+                    <div id="point_container">
+                        <div id="need_point" class="point_holder">
+                            <div id="needs" class="point">
+                                Needs
+                            </div>
+                            <div id="needs_color" class="point_color"></div>
+                        </div>
+                        <div id="want_point" class="point_holder">
+                            <div id="wants" class="point">
+                                Wants
+                            </div>
+                            <div id="wants_color" class="point_color"></div>
+                        </div>
+                        <div id="save_point" class="point_holder">
+                            <div id="save" class="point">
+                                Savings
+                            </div>
+                            <div id="saving_color" class="point_color"></div>
+                        </div>
+                    </div>
+                    <div id="check">
+                        <button id="check_button">
+                            Check Out Why Here
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="popup_container_2">
+                <div id="popup_2">
+                    <div id="check_card">
+                        <div id="check_header">
+                            <div id="check_title">
+                                Your Current Budget
+                            </div>
+                            <div id="times_2">
+                                &times;
+                            </div>
+                        </div>
+                        <div id="check_body">
+                            <div id="income_check_container" class="check_text">
+                                Total income : $<div id="check_income"></div>
+                            </div>
+                            <div id="expense_check_container" class="check_text">
+                                Total Needs : $<div id="needs_check"></div>
+                            </div>
+                            <div id="wants_check_container" class="check_text">
+                                Total Wants : $<div id="wants_check"></div>
+                            </div>
+                            <div id="total_savings" class="check_text">
+                                Total Savings Left : $ <div id="savings_check"></div>
+                            </div>
+                            <div id="check_rule_title">
+                                To meet the budget split rule
+                            </div>
+                            <div id="check_rule_body">
+                                <div id="fifty_container" class="percentage_container">
+                                    <div id="fifty_body">
+                                        <div class="money_sign">$</div>
+                                        <div id="fifty_percent" class="percentage"></div>
+                                    </div>
+                                    <div id="fifty_percentage_container" class="percentage_container">
+                                        50%
+                                    </div>
+                                    <div id="fifty_percentage_text">Needs</div>
+                                </div>
+                                <div id="thirty_container" class="percentage_container">
+                                    <div id="thirty_body">
+                                        <div class="money_sign">$</div>
+                                        <div id="thirty_percent" class="percentage"></div>
+                                    </div>
+                                    <div id="thirty_container" class="percentage_container">
+                                        30%
+                                    </div>
+                                    <div id="thirty_percentage_text">Wants</div>
+                                </div>
+                                <div id="twenty_container" class="percentage_container">
+                                    <div id="twenty_body">
+                                        <div class="money_sign">$</div>
+                                        <div id="twenty_percent" class="percentage"></div>
+                                    </div>
+                                    <div id="twenty_container" class="percentage_container">
+                                        20%
+                                    </div>
+                                    <div id="twenty_percentage_text">Savings</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <h1 id="heading_header">
                 Budget Calculator
             </h1>
             <h3 id="heading_body">
-                Hi and welcome to my free budget planner .
-                This is a demo site that is coded to<br id="bonk">
-                be used in the state of because of the tax levels at different incomes. 
-                <br id="bonk">We will be using the 50% / 30% / and 20%  rule to figure calculations for a budget.
+                Hi and welcome to my free budget planner .This is a demo site. 
+                We will be using the <br id="bonk"> 50% / 30% / and 20%  rule to figure calculations for a budget.
             </h3>
             <h3 id="rule">
                 <a href="https://www.unfcu.org/guides/the-50-30-20-rule/#" id="rule_anchor" >Documentation for the rule</a>
@@ -36,11 +149,11 @@
                     $&nbsp;
                 </div>
                 <div id="income_value" class="heading_text">
-                    6,125
+                    0
                 </div>
             </div>
             <div id="income_slider" class="slider_container">
-                <input type="range" id="income_slide" min="0" max="12500" class="slider">
+                <input type="range" id="income_slide" min="0" max="8000" class="slider" value="0">
             </div>
             <div id="other_income" class="input">
                 <div id="other_income" class="heading_text">
@@ -51,11 +164,11 @@
                     $&nbsp;
                 </div>
                 <div id="other_value" class="heading_text">
-                    2,500
+                    0
                 </div>
             </div>
             <div id="other_slider" class="slider_container">
-                <input type="range" id="other_slide" min="0" max="5000" class="slider">
+                <input type="range" id="other_slide" min="0" max="5000" class="slider" value="0">
             </div>
             <div class="misc_input">
                 <div id="misc_income" class="mobile_holder">
@@ -67,7 +180,7 @@
                         $&nbsp;
                     </div>
                     <div id="misc_input" class="num_container">
-                        <input type="number" id="misc_cash" class="num">
+                        <input type="number" id="misc_cash" class="num" value="0">
                     </div>
                 </div>
             </div>
@@ -83,11 +196,11 @@
                     $&nbsp;
                 </div>
                 <div id="rent_value" class="heading_text">
-                    2,500
+                    0
                 </div>
             </div>
             <div id="rent_slider" class="slider_container">
-                <input type="range" id="rent_slide" min="0" max="5000" class="slider">
+                <input type="range" id="rent_slide" min="0" max="5000" class="slider" value="0">
             </div>
             <div class="input">
                 <div id="utility_expense" class="input">
@@ -98,11 +211,11 @@
                     $&nbsp;
                 </div>
                 <div id="utility_value" class="heading_text">
-                    500
+                    0
                 </div>
             </div>
             <div id="utility_slider" class="slider_container">
-                <input type="range" id="utility_slide" min="0" max="1000" class="slider">
+                <input type="range" id="utility_slide" min="0" max="1000" class="slider" value="0">
             </div>
             <div class="input">
                 <div id="car_expenses" class="input">
@@ -113,26 +226,11 @@
                     $&nbsp;
                 </div>
                 <div id="car_value" class="heading_text">
-                    1,500
+                    0
                 </div>
             </div>
             <div id="car_slider" class="slider_container">
-                <input type="range" id="car_slide" min="0" max="3000" class="slider">
-            </div>
-            <div class="input">
-                <div id="savings" class="input">
-                    Savings :
-                    &nbsp;
-                </div>
-                <div class="savings_container heading_text">
-                    $&nbsp;
-                </div>
-                <div id="saving_value" class="heading_text">
-                    2,500
-                </div>
-            </div>
-            <div id="saving_slider" class="slider_container">
-                <input type="range" id="saving_slide" min="0" max="5000" class="slider">
+                <input type="range" id="car_slide" min="0" max="3000" class="slider" value="0">
             </div>
             <div class="input">
                 <div id="debt" class="input">
@@ -143,14 +241,14 @@
                     $&nbsp;
                 </div>
                 <div id="debt_value" class="heading_text">
-                    2,500
+                    0
                 </div>
             </div>
             <div id="debt_slider" class="slider_container">
-                <input type="range" id="debt_slide" min="0" max="5000" class="slider">
+                <input type="range" id="debt_slide" min="0" max="5000" class="slider" value="0">
             </div>
             <div class="misc_input">
-                <div id="misc_nesc" class="mobile_holder">
+                <div id="misc_nesc_container" class="mobile_holder">
                     Miscellaneous :
                     &nbsp;
                 </div>
@@ -159,7 +257,7 @@
                         $&nbsp;
                     </div>
                     <div id="misc_input" class="num_container">
-                        <input type="number" id="misc_nesc" class="num">
+                        <input type="number" id="misc_nesc" class="num" value="0">
                     </div>
                 </div>
             </div>
@@ -175,11 +273,11 @@
                     $&nbsp;
                 </div>
                 <div id="spending_value" class="heading_text">
-                    500
+                    0
                 </div>
             </div>
             <div id="spending_slider" class="slider_container">
-                <input type="range" id="spending_slide" min="0" max="1000" class="slider">
+                <input type="range" id="spending_slide" min="0" max="1000" class="slider" value="0">
             </div>
             <div class="input">
                 <div id="vacation" class="input">
@@ -190,11 +288,11 @@
                     $&nbsp;
                 </div>
                 <div id="vacation_value" class="heading_text">
-                    50
+                    0
                 </div>
             </div>
             <div id="vacation_slider" class="slider_container">
-                <input type="range" id="vacation_slide" min="0" max="100" class="slider">
+                <input type="range" id="vacation_slide" min="0" max="500" class="slider" value="0">
             </div>
             <div class="input">
                 <div id="emergency" class="input">
@@ -205,14 +303,14 @@
                     $&nbsp;
                 </div>
                 <div id="emergency_value" class="heading_text">
-                    250
+                    0
                 </div>
             </div>
             <div id="emergency_slider" class="slider_container">
-                <input type="range" id="emergency_slide" min="0" max="500" class="slider">
+                <input type="range" id="emergency_slide" min="0" max="1000" class="slider" value="0">
             </div>
             <div class="misc_input">
-                <div id="misc_want" class="mobile_holder">
+                <div id="misc_want_container" class="mobile_holder">
                     Miscellaneous :
                     &nbsp;
                 </div>
@@ -221,13 +319,16 @@
                         $&nbsp;
                     </div>
                     <div class="num_container">
-                        <input type="number" id="misc_want" class="num">
+                        <input type="number" id="misc_want" class="num" value="0">
                     </div>
                 </div>
             </div>
             <div id="submit_container">
                 <button id="submit">
                     Submit
+                </button>
+                <button id="reset">
+                    Reset
                 </button>
             </div>
         </div>
